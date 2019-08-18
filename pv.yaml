@@ -1,0 +1,16 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: pv-elasticsearch-datanode
+  namespace: elasticsearch
+  labels:
+    type: local
+    app: elasticsearch
+spec:
+  storageClassName: fast
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/opt/appdata/elasticsearch"
