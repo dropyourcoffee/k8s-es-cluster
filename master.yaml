@@ -83,6 +83,8 @@ spec:
           - emptyDir:
               medium: ""
             name: "storage"
+      nodeSelector:
+        kubernetes.io/hostname: k8s-node02.local
 ---
 apiVersion: v1
 kind: Service
