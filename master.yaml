@@ -72,7 +72,9 @@ spec:
               resource: limits.cpu
         resources:
           limits:
-            cpu: 2
+            cpu: 1
+          requests:
+            cpu: 500m
         ports:
         - containerPort: 9300
           name: transport
@@ -84,7 +86,7 @@ spec:
               medium: ""
             name: "storage"
       nodeSelector:
-        kubernetes.io/hostname: k8s-node02.local
+        kubernetes.io/hostname: k8s-node01.local
 ---
 apiVersion: v1
 kind: Service

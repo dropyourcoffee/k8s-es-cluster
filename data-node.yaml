@@ -88,7 +88,7 @@ spec:
         - name: storage
           mountPath: /data
       nodeSelector:
-        kubernetes.io/hostname: k8s-node02.local
+        kubernetes.io/hostname: k8s-node01.local
   volumeClaimTemplates:
   - metadata:
       name: storage
